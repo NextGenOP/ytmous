@@ -61,7 +61,7 @@ app.get("/s", async (req, res) => {
 });
 
 // Watch Page
-app.get(["/w/:id", "/embed/:id", "/live/:id", "/shorts/:id", "/watch"], async (req, res) => {
+app.get(["/w/:id", "/live/:id", "/shorts/:id", "/watch"], async (req, res) => {
   if (!util.validateID(req.params.id)) return util.sendInvalidIDError(res);
   if (!util.validateID(req.query.v)) return util.sendInvalidIDError(res);
   try {
